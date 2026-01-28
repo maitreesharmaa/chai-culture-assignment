@@ -4,6 +4,14 @@ import cupImage from '../assets/cup.png';
 export default function Hero() {
   const [email, setEmail] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    if (email) {
+      alert(`Thank you! You have been added to the list: ${email}`);
+      setEmail(''); 
+    }
+  };
+
   return (
     <main className="relative z-10 w-full max-w-4xl flex flex-col items-center mt-2 md:mt-4 transition-all duration-500 pb-0">
       
@@ -36,15 +44,16 @@ export default function Hero() {
         Launching Soon
       </span>
 
-      <form className="flex flex-col md:flex-row gap-3 w-full max-w-md relative z-20 px-4">
+      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 w-full max-w-md relative z-20 px-4">
         <input 
           type="email" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email for early access" 
           className="flex-1 bg-transparent border-b-2 border-[#D4AF37] py-2 text-[#F5F5DC] placeholder-opacity-50 placeholder-[#F5F5DC] focus:outline-none text-base transition-all focus:border-[#F3E5AB]"
+          required 
         />
-        <button className="bg-gradient-to-r from-[#D4AF37] to-[#C5A028] text-[#2C1A1D] px-6 py-2 font-bold uppercase tracking-wider text-sm hover:scale-105 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 whitespace-nowrap">
+        <button type="submit" className="bg-gradient-to-r from-[#D4AF37] to-[#C5A028] text-[#2C1A1D] px-6 py-2 font-bold uppercase tracking-wider text-sm hover:scale-105 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 whitespace-nowrap">
           Notify Me
         </button>
       </form>
@@ -56,6 +65,10 @@ export default function Hero() {
         <p className="text-[10px] uppercase tracking-[0.2em] mt-1 opacity-60 text-[#F5F5DC]">
           — Jay Trivedi, Founder
         </p>
+      </div>
+
+      <div className="text-[10px] text-[#F5F5DC] opacity-40 tracking-widest mt-auto mb-1">
+          © 2026 CHAI CULTURE. ALL RIGHTS RESERVED.
       </div>
     </main>
   );
