@@ -1,5 +1,7 @@
 # Chai Culture - Frontend Assignment
 
+🔗 **Live Demo:** [https://chai-culture-assignment-gold.vercel.app](https://chai-culture-assignment-gold.vercel.app)
+
 A premium "Coming Soon" landing page for a royal chai brand, featuring cinematic animations and a luxury aesthetic.
 
 ## 🌟 Key Features
