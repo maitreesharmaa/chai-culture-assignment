@@ -66,10 +66,7 @@ export default function Hero() {
           — Jay Trivedi, Founder
         </p>
       </div>
-
-      <div className="text-[10px] text-[#F5F5DC] opacity-40 tracking-widest mt-auto mb-1">
-          © 2026 CHAI CULTURE. ALL RIGHTS RESERVED.
-      </div>
+      
     </main>
   );
 }
